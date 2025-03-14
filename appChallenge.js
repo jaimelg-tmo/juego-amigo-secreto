@@ -187,3 +187,9 @@ function apagaBoton2() {
     return;
 }
 
+//  12.  Creo una función para limpiar al campo luego de ingresar un nombre.
+function limpiarCampo2() {
+    document.querySelector('#participantes').value = '';
+    return;
+}
+
