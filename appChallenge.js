@@ -70,3 +70,15 @@ function confirmarLista() {
         document.getElementById('sorteo').removeAttribute('disabled');
         return;
     }
+
+//  6.  Creo una función para sortear los amigos secretos y sus asignaciones.
+function sortearAmigo() {
+    const amigosSecretos = asignarParejas(amigos); // Asigna los amigos secretos.
+    apagaBoton1();
+    document.getElementById('sorteado').innerHTML = '¡¡ EL SORTEO SE HA REALIZADO CON ÉXITO !!';
+    document.getElementById('sorteo').disabled = true;
+    document.getElementById('participantes').removeAttribute('disabled');
+    document.getElementById('ingreso').removeAttribute('disabled');
+    return amigosSecretos;
+}
+
