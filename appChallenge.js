@@ -143,3 +143,17 @@ function mostrarListaParticipantes() {
     }
 }
 
+//  9.  Creo una función para mostrar el amigo secreto asignado al participante.
+function mostrarAmigoSecreto() {
+    let participante = nombreParticipante[nombreParticipante.length - 1]; // Último participante ingresado
+    let asignacion = asignaciones.find(asignacion => asignacion.persona === participante);
+    if (asignacion) {
+        let amigoSecreto = asignacion.amigoSecreto;
+        document.getElementById('resultado').innerHTML = `${participante}, su amigo secreto es: ${amigoSecreto}.`;
+        document.getElementById('descubrir').setAttribute('disabled', 'true');
+        document.getElementById('ocultar').removeAttribute('disabled');
+    } else {
+        alert('No se encontró una asignación para este participante.');
+    }
+}
+
