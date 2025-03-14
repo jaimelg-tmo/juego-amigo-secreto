@@ -193,3 +193,27 @@ function limpiarCampo2() {
     return;
 }
 
+//  13.  Creo una función para reiniciar el juego.
+function reiniciarJuego() {
+    amigos = [];
+    nombreParticipante = [];
+    asignaciones = [];
+    document.getElementById('listaAmigos').innerHTML = '';
+    document.getElementById('listaParticipantes').innerHTML = '';
+    document.getElementById('resultado').innerHTML = '';
+    document.getElementById('sorteado').innerHTML = '';
+    document.getElementById('participantes').value = '';
+    document.getElementById('anadir').disabled = false;
+    document.getElementById('sorteo').disabled = true;
+    document.getElementById('ingreso').disabled = true;
+    document.getElementById('reiniciar').disabled = true;
+    inputParticipante.disabled = true;
+    document.getElementById('amigo').disabled = false;
+    document.getElementById('amigo').value =  '';
+    document.getElementById('amigo').focus();
+    console.log(amigos);
+    console.log(nombreParticipante);
+    console.log(asignaciones);
+    return;
+}
+
