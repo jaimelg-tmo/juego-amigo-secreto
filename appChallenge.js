@@ -102,3 +102,33 @@ function asignarParejas(amigos) {
     console.log(asignaciones);
     return asignaciones;
 }
+
+//  7.  Creo una función para ingresar el participante que descubrirá a su amigo secreto.
+function ingresarParticipantes() {
+    let participante = inputParticipante.value.toUpperCase();
+
+    if (nombreParticipante.includes(participante)) {
+        alert('Este participante ya ha descubierto su amigo secreto. Por favor, ingrese otro nombre.');
+        inputParticipante.value = '';
+        inputParticipante.focus();
+        return;
+    } else {
+        if (!amigos.includes(participante)) {
+            alert("Por favor, ingrese un nombre válido de la lista de amigos participantes.");
+            inputParticipante.value = '';
+            inputParticipante.focus();
+            return;
+        } else {    
+            nombreParticipante.push(participante);
+            mostrarListaParticipantes();
+            apagaBoton2();
+            document.getElementById('descubrir').removeAttribute('disabled');
+            inputParticipante.value = '';
+            inputParticipante.disabled = true;
+            document.getElementById('participantes').focus();
+            console.log(nombreParticipante);
+            return;
+        }
+    }
+}
+
