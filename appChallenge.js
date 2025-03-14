@@ -45,3 +45,15 @@ function mostrarListaAmigos() {
         listaAmigosNuevos.appendChild(item);
     }
 }
+
+//  4.  Creo una función para borrar la lista de amigos.
+function borrarLista() {
+    amigos = [];
+    document.getElementById('listaAmigos').innerHTML = '';
+    document.getElementById('amigo').value = '';
+    document.getElementById('amigo').focus();
+    document.getElementById('borrar').disabled = true;
+    document.getElementById('confirmar').disabled = true;
+    return;
+}
+
