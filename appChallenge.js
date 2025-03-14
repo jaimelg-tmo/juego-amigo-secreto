@@ -57,3 +57,16 @@ function borrarLista() {
     return;
 }
 
+//  5.  Creo una función para confirmar la lista de amigos.
+function confirmarLista() {
+    if (amigos.length < 3) {
+        alert("Para realizar el sorteo se requiere un mínimo de 3 amigos participantes.");
+        return;
+    } else {
+        document.getElementById('borrar').disabled = true;
+        document.getElementById('confirmar').disabled = true;
+        document.getElementById('amigo').disabled = true;
+        document.getElementById('anadir').disabled = true;
+        document.getElementById('sorteo').removeAttribute('disabled');
+        return;
+    }
