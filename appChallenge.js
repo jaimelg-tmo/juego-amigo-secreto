@@ -174,3 +174,16 @@ function ocultarAmigo() {
 }
 }
 
+//  11.  Creo funciones para deshabilitar los botones de Añadir e Ingresar
+function apagaBoton1() {
+    let anadir = document.getElementById('anadir');
+    anadir.disabled = true;
+    return;
+}
+
+function apagaBoton2() {
+    let ingreso = document.getElementById('ingreso');
+    ingreso.disabled = true;
+    return;
+}
+
