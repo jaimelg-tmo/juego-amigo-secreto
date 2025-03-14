@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Amigo Secreto</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Amigo Secreto</h1>
+            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
+        </header>
+        
+        <section class="input-section">
+            <h2 class="section-title">1. Añada los nombres de los amigos participantes.</h2>
+            <p>(Añada al menos 3 amigos participantes).</p>
+        
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Escriba un nombre">
+                <button class="button-add" id="anadir" onclick="agregarAmigo()">Añadir</button>
+            </div>
+            <p></p>
+            <p>* LISTA DE AMIGOS PARTICIPANTES *</p>
+            <ol id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list" type="(1)"></ol>
+            <p></p>
+            <div class="button-container">
+                <button class="button-draw" id="borrar" onclick="borrarLista()" aria-label="Borrar lista de amigos" disabled>
+                    <img src="assets/borrar2.png" alt="Ícono para borrar" width="41px" height="41px">
+                    Descartar Lista
+                </button> 
+                <button class="button-draw" id="confirmar" onclick="confirmarLista()" aria-label="Confirmar lista de amigos" disabled>
+                    <img src="assets/confirmar.png" alt="Ícono para confirmar" width="35px" height="35px">
+                    Confirmar Lista
+                </button> 
+            </div>
+            <p></p>
+
+            <h3 class="section-title">2. Presione el botón para realizar el sorteo del Amigo Secreto.</h3>
+            
+            <div class="button-container">
+                <button class="button-draw" id="sorteo" onclick="sortearAmigo()" aria-label="Sortear amigos secretos" disabled>
+                    <img src="assets/sortear.png" alt="Ícono para sortear" width="40px" height="40px">
+                    Sortear Amigos Secretos
+                </button>  
+            </div>
+
+            <ul id="sorteado" class="result-list" aria-live="polite"></ul>
+                        
+            <h4 class="section-title">3. Descubra quién es su Amigo Secreto.</h4>
+            <p>Paso 1. Ingrese su nombre en el siguiente cuadro y pulse "Ingresar".</p>
+            <p>Paso 2. Presione el botón "Descubra su Amigo Secreto".</p>
+            <p>Paso 3. Presione el botón "Oculte su Amigo Secreto".</p>
+            <div class="input-wrapper">
+                <input type="text" id="participantes" class="input-name" placeholder="Ingrese su nombre para descubrir a su Amigo Secreto" disabled>
+                <button class="button-add" id="ingreso" onclick="ingresarParticipantes()" disabled>Ingresar</button>
+            </div>
+            <p></p>
+            <div class="button-container">
+                <button class="button-draw" id="descubrir" onclick="mostrarAmigoSecreto()" aria-label="Descubrir amigo secreto" disabled>
+                    <img src="assets/descubrir.png" alt="Ícono para sortear" width="35px" height="35px">
+                    Descubra su Amigo Secreto
+                </button>  
+            </div>
+
+            <ul id="resultado" class="result-list" aria-live="polite"></ul>
+
+            <div class="button-container">
+                <button class="button-draw" id="ocultar" onclick="ocultarAmigo()" aria-label="Ocultar amigo secreto" disabled>
+                    <img src="assets/ocultar.png" alt="Ícono para ocultar" width="35px" height="35px">
+                    Oculte su Amigo Secreto
+                </button>
+            </div>
+            <p></p>
+            <p>* Participantes que ya han descubierto a su Amigo Secreto *</p>
+            <ol id="listaParticipantes" class="name-list" aria-labelledby="listaParticipantes" role="list"></ol>
+            <p></p>
+            <h5 class="section-title">4. Reinicie el Juego.</h5>
+            <p></p>
+            <div class="button-container">
+                <button class="button-draw" id="reiniciar" onclick="reiniciarJuego()" aria-label="Reiniciar Juego" disabled>
+                    <img src="assets/reiniciar.png" alt="Ícono para reiniciar" width="35px" height="35px">
+                    Reiniciar juego
+                </button> 
+            </div>
+            <p></p>            
+        </section>
+        <footer class="footer">
+            Desarrollado por Jaime Lira García.
+        </footer>
+    </main>
+    <script src="appChallengeAmigoSecreto.js" defer></script>
+</body>
+</html>
