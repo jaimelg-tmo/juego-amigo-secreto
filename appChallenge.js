@@ -157,3 +157,20 @@ function mostrarAmigoSecreto() {
     }
 }
 
+//  10.  Creo una función para ocultar el Amigo Secreto descubierto.
+function ocultarAmigo() {
+    document.getElementById('resultado').innerHTML = '';
+    document.querySelector('#ocultar').setAttribute('disabled', 'true');
+    ingreso.disabled = false;
+    inputParticipante.disabled = false;
+    
+    if (amigos.length == nombreParticipante.length) {
+        alert('Ya se han descubierto todos los Amigos Secretos.');
+        limpiarCampo2();
+        inputParticipante.disabled = true;
+        apagaBoton2();
+        document.getElementById('reiniciar').disabled = false;
+        return;
+}
+}
+
