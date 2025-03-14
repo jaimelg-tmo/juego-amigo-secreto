@@ -132,3 +132,14 @@ function ingresarParticipantes() {
     }
 }
 
+//  8.  Creo una función mostrar la lista de participantes que han descubierto a su amigo secreto.
+function mostrarListaParticipantes() {
+    let lista2 = document.getElementById('listaParticipantes');
+    let item2 = document.createElement('li');  
+    
+    for (let i = 0; i < nombreParticipante.length;i++) {
+        item2.innerText = nombreParticipante[i];
+        lista2.appendChild(item2);
+    }
+}
+
