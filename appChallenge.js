@@ -34,3 +34,14 @@ function agregarAmigo() {
         }
     }
 }
+
+//  3.  Creo una función para mostrar en la interfaz la lista de amigos participantes.
+function mostrarListaAmigos() {
+    let listaAmigosNuevos = document.getElementById('listaAmigos');
+    let item = document.createElement('li');  
+    
+    for (let i = 0; i < amigos.length;i++) {
+        item.innerText = amigos[i];
+        listaAmigosNuevos.appendChild(item);
+    }
+}
