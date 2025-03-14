@@ -82,3 +82,23 @@ function sortearAmigo() {
     return amigosSecretos;
 }
 
+// Lógica para asignar las parejas de amigos secretos.
+function asignarParejas(amigos) {
+    asignaciones = [];
+    let amigosDisponibles = [...amigos];
+
+    // Asignar un amigo secreto de forma aleatoria sin repetir
+    for (let i = 0; i < amigos.length; i++) {
+        let amigoSecreto;
+        do {
+            const index = Math.floor(Math.random() * amigosDisponibles.length);
+            amigoSecreto = amigosDisponibles[index];
+        } while (amigoSecreto === amigos[i]);
+
+        // Eliminar el amigo asignado de la lista
+        amigosDisponibles = amigosDisponibles.filter(amigo => amigo !== amigoSecreto);
+        asignaciones.push({ persona: amigos[i], amigoSecreto });
+    }
+    console.log(asignaciones);
+    return asignaciones;
+}
