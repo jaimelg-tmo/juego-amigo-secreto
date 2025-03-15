@@ -149,7 +149,7 @@ function mostrarAmigoSecreto() {
     let asignacion = asignaciones.find(asignacion => asignacion.persona === participante);
     if (asignacion) {
         let amigoSecreto = asignacion.amigoSecreto;
-        document.getElementById('resultado').innerHTML = `${participante}, su amigo secreto es: ${amigoSecreto}.`;
+        document.getElementById('resultado').innerHTML = `¡¡ ${participante}, su amigo secreto es: ${amigoSecreto} !!`;
         document.getElementById('descubrir').setAttribute('disabled', 'true');
         document.getElementById('ocultar').removeAttribute('disabled');
     } else {
@@ -216,4 +216,3 @@ function reiniciarJuego() {
     console.log(asignaciones);
     return;
 }
-
