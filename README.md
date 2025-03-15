@@ -151,4 +151,4 @@ Para reiniciar el juego, volver a las condiciones iniciales y poder sortear Amig
    <li>En eventos corporativos.</li>
 </ul>
 <p>¡¡ Anímate a vivir una experiencia entretenida !!<br>
-Prueba el juego en: </p>
+Prueba el juego en: https://jaimelg-tmo.github.io/juego-amigo-secreto/</p>
