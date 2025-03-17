@@ -220,3 +220,15 @@ ol {
     position: static;
     bottom: 0;
 }
+
+@media (max-width:650px) {
+    .header-banner {
+        padding: 20px 0 0;
+        flex-direction: column;
+    }
+
+    .button-container {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+}
